@@ -177,7 +177,7 @@ Interfaz Reportes
 
 Interfaz Venta
 
-<img src="frontend\ferreteriaApp\src\assets\screenshots\venta.webp" width="800" alt="Interfaz Reportes">
+<img src="frontend\ferreteriaApp\src\assets\screenshots\venta.webp" width="800" alt="Interfaz Venta">
 
 </div>
 
