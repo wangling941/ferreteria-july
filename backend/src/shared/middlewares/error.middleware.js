@@ -10,12 +10,12 @@ function errorHandler(err, req, res, next) {
     return handlePrismaKnownError(err, res);
   }
 
-  const isAppError = err instanceof AppError;
-  const statusCode = isAppError ? err.statusCode : 500;
-  const message = isAppError ? err.message : 'Internal server error';
-  const details = isAppError ? err.details : null;
+  const isControlledError = err instanceof AppError || Number.isInteger(err.statusCode);
+  const statusCode = isControlledError ? err.statusCode : 500;
+  const message = isControlledError ? err.message : 'Internal server error';
+  const details = isControlledError ? err.details : null;
 
-  if (!isAppError) {
+  if (!isControlledError) {
     console.error('[UNHANDLED_ERROR]', err);
   }
 
@@ -28,7 +28,7 @@ function errorHandler(err, req, res, next) {
     payload.details = details;
   }
 
-  if (process.env.NODE_ENV === 'development' && !isAppError) {
+  if (process.env.NODE_ENV === 'development' && !isControlledError) {
     payload.stack = err.stack;
   }
 

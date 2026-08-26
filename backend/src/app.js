@@ -18,7 +18,28 @@ const notificationsRoutes = require("./modules/notifications/notifications.route
 const chatbotRoutes = require("./modules/chatbot/chatbot.routes");
 const app = express();
 
-app.use(cors());
+const defaultAllowedOrigins = [
+  "http://localhost:4200",
+  "http://localhost:8100",
+  "http://127.0.0.1:4200",
+  "http://127.0.0.1:8100",
+];
+
+const configuredAllowedOrigins = env.CORS_ORIGIN
+  ? env.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean)
+  : defaultAllowedOrigins;
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || configuredAllowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(null, false);
+    },
+  }),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

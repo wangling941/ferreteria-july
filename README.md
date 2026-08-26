@@ -36,7 +36,7 @@ El sistema ofrece una experiencia unificada: desde un **Punto de Venta (POS)** �
 - **👥 Gestión de Usuarios y Roles**: Sistema de autenticación seguro con roles de `Administrador` y `Vendedor`, permitiendo control granular de accesos y permisos.
 - **📊 Centro de Reportes y Análisis**: Genera reportes de ventas por fechas, visualiza gráficos de evolución, exporta a CSV/PDF y consulta los productos más vendidos.
 - **🤖 Asistente Inteligente (Chatbot)**: Desarrollo de un chatbot basado en reglas y procesamiento de comandos, capaz de responder consultas relacionadas con ventas, inventario, clientes, reportes y métricas del sistema utilizando información almacenada en la base de datos.
-- **🔄 Actualizaciones en Tiempo Real**: La información de inventario, ventas y reportes se actualiza de manera automática, reflejando cambios sin necesidad de recargar la página.
+- **🔄 Actualizaciones Automáticas**: La información de inventario, ventas, reportes y notificaciones se actualiza mediante consultas HTTP periódicas, reflejando cambios sin necesidad de recargar la página.
 
 ---
 
@@ -44,22 +44,36 @@ El sistema ofrece una experiencia unificada: desde un **Punto de Venta (POS)** �
 
 ### **Frontend**
 
-- **Angular 18** con **Ionic 8**: Para una aplicación web/móvil híbrida de alto rendimiento.
+- **Angular 20** con **Ionic 8**: Para una aplicación web/móvil híbrida de alto rendimiento.
 - **Chart.js**: Para visualización de datos y gráficos analíticos.
 - **SCSS**: Estilos avanzados con diseño responsivo y temas personalizados.
 
 ### **Backend**
 
-- **Node.js** con **Express**: API REST robusta y escalable.
+- **Node.js** con **Express**: API REST robusta y escalable implementada en JavaScript/CommonJS.
 - **Prisma ORM**: Para una interacción segura y tipada con la base de datos.
 - **PostgreSQL**: Base de datos relacional confiable y potente.
 - **JWT (JSON Web Tokens)**: Para autenticación segura de usuarios.
 
 ### **Funcionalidades Extra**
 
-- **WebSockets (Socket.IO)**: Para comunicación en tiempo real y actualizaciones automáticas.
+- **Polling HTTP**: Para actualizaciones automáticas sin recargar la aplicación. Socket.IO no está implementado actualmente.
 - **JSPDF & HTML2Canvas**: Para la generación de reportes y facturas en PDF e imagen.
-- **TypeScript**: Tipado estático y código más mantenible.
+- **TypeScript**: Utilizado en el frontend Angular/Ionic.
+
+## 🌐 Demo Online
+
+Frontend:
+[Pendiente de despliegue]
+
+Backend:
+[Pendiente de despliegue]
+
+Usuario demo:
+[Pendiente]
+
+Contraseña:
+[No publicada todavía]
 
 ---
 

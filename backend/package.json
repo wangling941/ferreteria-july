@@ -10,6 +10,7 @@
     "prisma:migrate": "prisma migrate dev --schema src/prisma/schema.prisma",
     "prisma:deploy": "prisma migrate deploy --schema src/prisma/schema.prisma",
     "db:seed": "node src/prisma/seed.js",
+    "demo:create-user": "node scripts/create-demo-user.js",
     "test": "node -e \"console.log('No tests configured yet')\""
   },
   "keywords": [
@@ -33,8 +34,5 @@
   "devDependencies": {
     "nodemon": "^3.1.14",
     "prisma": "^6.8.2"
-  },
-  "prisma": {
-    "seed": "node src/prisma/seed.js"
   }
 }
