@@ -76,8 +76,8 @@ Sigue estos pasos para levantar el proyecto en tu entorno local.
 ### **1. Clonar el repositorio**
 
 ```bash
-git clone https://github.com/wangling941/ferreteria-july.git
-cd ferreteria-july
+git clone https://github.com/wanglingtech/ferreteria-pos.git
+cd ferreteria-pos
 ```
 
 # 1. Configurar la Base de Datos
@@ -177,7 +177,7 @@ Interfaz Reportes
 
 Interfaz Venta
 
-<img src="frontend\ferreteriaApp\src\assets\screenshots\reportes.webp" width="800" alt="Interfaz Reportes">
+<img src="frontend\ferreteriaApp\src\assets\screenshots\venta.webp" width="800" alt="Interfaz Reportes">
 
 </div>
 
